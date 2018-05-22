@@ -1,0 +1,3 @@
+
+
+EVENT_ITEMS_EVERY_PAGE = 8
