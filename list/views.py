@@ -16,7 +16,7 @@ class IndexView(View):
             page = request.GET.get('page', 1)
         except PageNotAnInteger:
             page = 1
-        all_events = EventModel.objects.all().order_by("-add_time")
+        all_events = EventModel.objects.all()
         paginator = Paginator(all_events, EVENT_ITEMS_EVERY_PAGE, request=request)
         try:
             events = paginator.page(page)

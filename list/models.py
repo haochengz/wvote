@@ -6,9 +6,9 @@ from utils.images import ImageStorage
 
 class EventModel(models.Model):
     name = models.CharField(max_length=20)
-    desc = models.CharField(max_length=200)
-    start_date = models.DateField(max_length=30)
-    end_date = models.DateTimeField(max_length=30)
+    desc = models.CharField(max_length=200, default="")
+    start_date = models.DateField(max_length=30, default=timezone.now)
+    end_date = models.DateTimeField(max_length=30, default=timezone.now)
     add_time = models.DateTimeField(default=timezone.now)
 
 
